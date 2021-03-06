@@ -18,6 +18,9 @@ env-prod:
 env-sub: env-prod
 	envsubst < "docker-compose.prod.yml" > "docker-compose.yml"
 
+quick-push: encrypt-dotenv
+	git commit -am "quick push" && git push -f origin main
+
 deploy-prod: env-prod env-sub build-frontend
 	echo "Building ${ENVIRONMENT} Environment"
 	docker-compose up --build -d

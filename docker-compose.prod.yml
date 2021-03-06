@@ -27,13 +27,13 @@ services:
         env_file:
             - ${ROOT_FOLDER}/env/.env.${ENVIRONMENT}
         depends_on:
-            - sligodb
+            - db
         networks:
             - ${CADDY_NETWORK_NAME}
 
 
     # Django database
-    sligodb:
+    db:
         restart: always
         image: postgres:12.0-alpine
         volumes:
