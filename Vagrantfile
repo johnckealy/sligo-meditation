@@ -22,5 +22,6 @@ Vagrant.configure("2") do |config|
     mv /home/vagrant/caddy/ /
     mkdir /root/.ssh/
     touch /root/.ssh/authorized_keys
+    usermod -aG docker vagrant
   SHELL
 end

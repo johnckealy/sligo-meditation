@@ -149,10 +149,11 @@ if DEBUG:
 CORS_ALLOWED_ORIGINS = [os.environ.get("ORIGIN_URL"), 'http://localhost:8080']
 
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # new
-DEFAULT_FROM_EMAIL = 'johnckealy.dev@gmail.com'
-EMAIL_HOST = 'smtp.sendgrid.net' # new
-EMAIL_HOST_USER = 'apikey' # new
-EMAIL_HOST_PASSWORD = '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' # new
-EMAIL_PORT = 587 # new
-EMAIL_USE_TLS = True # new
+# Sendgrid Email service
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True

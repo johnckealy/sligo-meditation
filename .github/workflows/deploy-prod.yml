@@ -36,5 +36,5 @@ jobs:
         key: ${{ secrets.SSHKEY }}
         port: ${{ secrets.PORT }}
         command_timeout: 200m
-        script:  cd sligo-meditation/ && make deploy-prod
+        script: cd sligo-meditation/ && gpg --quiet --batch --yes --decrypt --passphrase=${{ secrets.DOTENV_ENCRYPTION_KEY }} env.tar.gpg | tar -x && make deploy-prod
 
