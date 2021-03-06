@@ -1,0 +1,38 @@
+
+.container {
+  width: 100%;
+  padding: 20px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media screen and (max-width: $breakpoint-xs-max) {
+      max-width: 540px;
+  }
+
+  @media screen and (max-width: $breakpoint-sm-max) {
+      max-width: 920px;
+  }
+
+  @media screen and (max-width: $breakpoint-lg-max) {
+      max-width: 1140px;
+  }
+
+  @media screen and (max-width: $breakpoint-xl-max) {
+      max-width: 1140px;
+  }
+}
+
+
+.text-h1 {
+  font-family: 'Times New Roman', Times, serif;
+
+  @media screen and (max-width: $breakpoint-md-max) {
+    font-size: 70px;
+  }
+}
+
+.text-h3 {
+  @media screen and (max-width: $breakpoint-md-max) {
+    font-size: 25px;
+  }
+}

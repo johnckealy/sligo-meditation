@@ -1,0 +1,10 @@
+dist
+*_env/
+__pycache__/
+node_modules/
+.quasar/
+src-ssr/
+.vagrant
+caddy/Caddyfile
+docker-compose.yml
+env
