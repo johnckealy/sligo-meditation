@@ -20,7 +20,7 @@ env-sub: env-prod
 
 deploy-prod: env-prod env-sub build-frontend
 	echo "Building ${ENVIRONMENT} Environment"
-	docker-compose up --build
+	docker-compose up --build -d
 
 build-python:
 	virtualenv -p $(PYTHON) $(ENV_DIR)
